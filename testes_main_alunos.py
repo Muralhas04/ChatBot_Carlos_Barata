@@ -1,7 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock
 from datetime import datetime
-from testes_main_alunos import obter_resposta, chat
+from app import obter_resposta, chat
 
 
 class TestChatBot(unittest.TestCase):
@@ -26,7 +26,7 @@ class TestChatBot(unittest.TestCase):
 
     def test_obter_resposta_horas(self):
         """Testa a resposta das horas dinâmica."""
-        resposta_esperada = f"São: {datetime.now():%H:%M} horas" 
+        resposta_esperada = f"São: {datetime.now():%H:%M} horas"  
         self.assertEqual(obter_resposta("que horas são?"), resposta_esperada)
     def test_obter_resposta_desconhecida(self):
         """Testa a resposta padrão quando o bot não entende."""
