@@ -26,8 +26,8 @@ class TestObterResposta(unittest.TestCase):
     def teste_historia_portugal(self):
         """Teste de respostas sobre história de Portugal - 1 teste"""
         self.assertEqual(obter_resposta("história de portugal"), "Portugal foi fundado em 1143 por D. Afonso Henriques.")
-        
-   def teste_cozinhar(self):
+
+    def teste_cozinhar(self):
         """Teste de respostas sobre cozinhar - 1 teste"""
         self.assertEqual(obter_resposta("cozinhar"), "Cozinhar envolve arte, técnica e bons ingredientes!")
 
@@ -48,7 +48,7 @@ class TestObterResposta(unittest.TestCase):
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
         self.assertEqual(obter_resposta("inteligência artificial"), "A inteligência artificial está a mudar o mundo tecnológico.")
         self.assertEqual(obter_resposta("futuro da ia"), "O futuro da inteligência artificial trará muita automação.")
-        
+
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
         self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
@@ -73,13 +73,15 @@ class TestObterResposta(unittest.TestCase):
         """Teste de resposta padrão"""
         texto_aleatorio = "xyz123"
         self.assertEqual(obter_resposta(texto_aleatorio), f"Desculpa, não entendi a questão! {texto_aleatorio}")
-        texto_aleatorio2 = "teste123" # fazer outro teste de texto aleatório
-        texto_aleatorio3 = "indisposição" # fazer outro teste de texto aleatório
-        texto_aleatorio4 = "sintomas de indisposição" # fazer outro teste de texto aleatório
+        
+        texto_aleatorio2 = "teste123"
+        self.assertEqual(obter_resposta(texto_aleatorio2), f"Desculpa, não entendi a questão! {texto_aleatorio2}")
+        
+        # Nota: "indisposição" não deve ser testada aqui como falha, pois o bot conhece essa palavra!
+        texto_aleatorio3 = "pergunta desconhecida" 
+        self.assertEqual(obter_resposta(texto_aleatorio3), f"Desculpa, não entendi a questão! {texto_aleatorio3}")
 
 
 if __name__ == '__main__':
     unittest.main()
-
-
-# para correr os testes: python -m unittest -v testes_main_alunos.py
+    
