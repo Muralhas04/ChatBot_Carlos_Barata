@@ -33,14 +33,14 @@ def obter_resposta(texto: str) -> str:
     }
     
 
-    # for chave, resposta in respostas.items():
-    #     if isinstance(chave, tuple):
-    #         if comando in chave:
-    #             return resposta
-    #     elif chave in comando:
-    #         return resposta
+for chave, resposta in respostas.items():
+        if isinstance(chave, tuple):
+            if comando in chave:
+                return resposta
+        elif chave in comando:
+            return resposta
 
-    # return f'Desculpa, não entendi a questão! {texto}'
+    return f'Desculpa, não entendi a questão! {texto}'
 
 
 def chat() -> None:
