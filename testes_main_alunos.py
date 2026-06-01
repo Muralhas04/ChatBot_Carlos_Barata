@@ -20,24 +20,35 @@ class TestObterResposta(unittest.TestCase):
     def teste_despedidas(self):
         """Teste de respostas a despedidas - 3 testes"""
         self.assertEqual(obter_resposta("bye"), "Gostei de falar contigo! Até breve...")
+        self.assertEqual(obter_resposta("adeus"), "Gostei de falar contigo! Até breve...")
+        self.assertEqual(obter_resposta("tchau"), "Gostei de falar contigo! Até breve...")
 
     def teste_historia_portugal(self):
         """Teste de respostas sobre história de Portugal - 1 teste"""
-
-    def teste_cozinhar(self):
+        self.assertEqual(obter_resposta("história de portugal"), "Portugal foi fundado em 1143 por D. Afonso Henriques.")
+        
+   def teste_cozinhar(self):
         """Teste de respostas sobre cozinhar - 1 teste"""
+        self.assertEqual(obter_resposta("cozinhar"), "Cozinhar envolve arte, técnica e bons ingredientes!")
 
     def teste_programar(self):
         """Teste de respostas sobre programar - 2 testes"""
+        self.assertEqual(obter_resposta("programar python"), "Python é uma excelente linguagem para programar!")
+        self.assertEqual(obter_resposta("aprender a programar"), "Programar exige muita prática e lógica.")
 
     def teste_desenvolvimento(self):
         """Teste de respostas sobre desenvolvimento - 4 testes"""
         self.assertEqual(obter_resposta("desenvolvimento web"), "O desenvolvimento web envolve a criação de sites e aplicações web...")
+        self.assertEqual(obter_resposta("desenvolvimento de software"), "O desenvolvimento de software segue um ciclo de vida planeado.")
+        self.assertEqual(obter_resposta("desenvolvimento mobile"), "Criar apps para telemóveis faz parte do desenvolvimento mobile.")
+        self.assertEqual(obter_resposta("equipa de desenvolvimento"), "O trabalho em equipa é essencial no desenvolvimento.")
 
     def teste_ia(self):
         """Teste de respostas sobre inteligência artificial - 3 testes"""
         self.assertEqual(obter_resposta("ia"), "A inteligência artificial é um campo da ciência da computação que se concentra na criação de sistemas que podem realizar tarefas que normalmente requerem inteligência humana.")
-
+        self.assertEqual(obter_resposta("inteligência artificial"), "A inteligência artificial está a mudar o mundo tecnológico.")
+        self.assertEqual(obter_resposta("futuro da ia"), "O futuro da inteligência artificial trará muita automação.")
+        
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
         self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
