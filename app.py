@@ -18,10 +18,10 @@ def obter_resposta(texto: str) -> str:
         return f'São: {datetime.now():%H:%M} horas'
     if 'data' in comando:
         return f'Hoje é dia: {datetime.now():%d-%m-%Y}'
-
+    
     return f'Desculpa, não entendi a questão! {texto}'
 
-   respostas = {
+    respostas = {
         ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
         'como estás': 'Estou bem, obrigado!',
         ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
@@ -32,8 +32,7 @@ def obter_resposta(texto: str) -> str:
         'ajuda': 'Podes perguntar-me pelas horas, tempo, o meu nome ou dizer adeus.'
     }
     
-
-for chave, resposta in respostas.items():
+    for chave, resposta in respostas.items():
         if isinstance(chave, tuple):
             if comando in chave:
                 return resposta
