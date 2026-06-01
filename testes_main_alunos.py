@@ -58,6 +58,8 @@ class TestObterResposta(unittest.TestCase):
     def teste_indisposicao(self):
         """Teste de respostas sobre indisposição - 3 testes"""
         self.assertEqual(obter_resposta("indisposição"), "Sintomas de indisposição podem incluir fadiga, dor de cabeça, náusea e outros sinais de que algo não está bem.")
+        self.assertEqual(obter_resposta("estou indisposto"), "Se sentes indisposição, o ideal é descansar um pouco.")
+        self.assertEqual(obter_resposta("muita indisposição"), "Indisposição persistente deve ser avaliada por um médico.")
 
     def teste_horas_e_data(self):
         """Teste de respostas a perguntas sobre horas e data"""
