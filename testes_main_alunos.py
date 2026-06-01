@@ -52,6 +52,8 @@ class TestObterResposta(unittest.TestCase):
     def teste_saude(self):
         """Teste de respostas sobre saúde - 3 testes"""
         self.assertEqual(obter_resposta("saúde"), "A saúde é um estado de completo bem-estar físico, mental e social, e não apenas a ausência de doenças ou enfermidades.")
+        self.assertEqual(obter_resposta("cuidar da saúde"), "Cuidar da saúde implica comer bem e fazer exercício.")
+        self.assertEqual(obter_resposta("saúde mental"), "A saúde mental é tão importante quanto a física.")
 
     def teste_indisposicao(self):
         """Teste de respostas sobre indisposição - 3 testes"""
