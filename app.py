@@ -24,8 +24,14 @@ def obter_resposta(texto: str) -> str:
    respostas = {
         ('olá', 'boa tarde', 'bom dia'): 'Olá tudo bem!',
         'como estás': 'Estou bem, obrigado!',
-   ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
-    # }
+        ('bye', 'adeus', 'tchau'): 'Gostei de falar contigo! Até breve...',
+        'como te chamas': 'O meu nome é: Bot :)',
+        'tempo': 'Está um dia de sol fantástico!',
+        'horas': f'São: {datetime.now():%H:%M} horas',
+        'idade': 'Eu sou um bot, não tenho idade, mas nasci hoje!',
+        'ajuda': 'Podes perguntar-me pelas horas, tempo, o meu nome ou dizer adeus.'
+    }
+    
 
     # for chave, resposta in respostas.items():
     #     if isinstance(chave, tuple):
