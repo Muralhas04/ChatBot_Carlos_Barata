@@ -47,7 +47,7 @@ def chat() -> None:
     print('Bem-vindo ao ChatBot!')
     print('Escreva "bye" para sair do chat')
     name: str = input('Bot: Como te chamas? ')
-    print(f'Bot: Olá, {name}! \n Como te posso ajudar?')
+    print(f'Bot: Olá, {name}! \nComo te posso ajudar?')
 
     while True:
         user_input: str = input('Tu: ')
